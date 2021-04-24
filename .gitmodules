@@ -1,0 +1,8 @@
+[submodule "slips"]
+	path = Drivers/slips
+	url = git@github.com:marcosatti/slips.git
+	
+[submodule "stm32-ssd1306"]
+	path = Drivers/stm32-ssd1306
+	url = git@github.com:afiskon/stm32-ssd1306.git
+
