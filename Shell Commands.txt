@@ -1,0 +1,15 @@
+# OpenOCD
+openocd -f ./openocd_ftdi.cfg
+openocd -f ./openocd_stlink.cfg
+
+# Telnet
+telnet localhost 4444
+reset halt
+flash write_image erase build/stm32-status-monitor-usb.bin 0x08000000
+flash verify_image build/stm32-status-monitor-usb.bin 0x08000000
+reset
+
+# GDB
+gdb ./build/stm32-status-monitor-usb.elf
+target extended-remote localhost:3333
+tui enable

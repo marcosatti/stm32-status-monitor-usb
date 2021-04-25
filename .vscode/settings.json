@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "cmsis_os.h": "c",
+        "main.h": "c",
+        "ssd1306.h": "c",
+        "pwm.h": "c",
+        "stdbool.h": "c",
+        "slips.h": "c",
+        "status.pb.h": "c"
+    }
+}

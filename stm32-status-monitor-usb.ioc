@@ -1,8 +1,10 @@
 #MicroXplorer Configuration settings - do not modify
-FREERTOS.IPParameters=Tasks01
-FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL
+FREERTOS.FootprintOK=true
+FREERTOS.IPParameters=Tasks01,FootprintOK,Queues01
+FREERTOS.Queues01=messageQueue,16,Status,0,Dynamic,NULL,NULL
+FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;displayTask,24,128,StartDisplayTask,Default,NULL,Dynamic,NULL,NULL
 File.Version=6
-GPIO.groupedBy=
+GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
 Mcu.Family=STM32F1
 Mcu.IP0=FREERTOS
@@ -130,7 +132,9 @@ RCC.USBFreq_Value=48000000
 RCC.USBPrescaler=RCC_USBCLKSOURCE_PLL_DIV1_5
 RCC.VCOOutput2Freq_Value=8000000
 USB_DEVICE.CLASS_NAME_FS=CDC
-USB_DEVICE.IPParameters=VirtualMode,VirtualModeFS,CLASS_NAME_FS
+USB_DEVICE.IPParameters=VirtualMode,VirtualModeFS,CLASS_NAME_FS,MANUFACTURER_STRING,PRODUCT_STRING_CDC_FS
+USB_DEVICE.MANUFACTURER_STRING=Marco Satti
+USB_DEVICE.PRODUCT_STRING_CDC_FS=Status Monitor
 USB_DEVICE.VirtualMode=Cdc
 USB_DEVICE.VirtualModeFS=Cdc_FS
 VP_FREERTOS_VS_CMSIS_V2.Mode=CMSIS_V2
